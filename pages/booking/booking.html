@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Booking | ServiGo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="container">
+    <img src="/images/servigo.png" alt="ServiGo Logo" />
+    <nav class="navbar">
+      <ul>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="../services/services.html">Services</a></li>
+           <li><a href="booking.html">Booking</a></li>
+        <li><a href="../login/login.html">Login</a></li>
+        <li><a href="../register/register.html">Register</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Booking Form -->
+  <section class="booking">
+    <h2>Book a Service</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="tel" placeholder="Enter Your phone" required />
+      <select required>
+        <option value="">Select Service</option>
+        <option value="ac">AC Repair</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="plumbing">Plumbing</option>
+        <option value="Home Cleaning">Home Cleaning</option>
+        <option value="Electrician">Electrician</option>
+        <option value="Carpentry">Carpentry</option>
+        <option value="Wall Painting">Wall Painting</option>
+        <option value="Laundry Services">Laundry Services</option>
+        <option value="Appliance Repai">Appliance Repai</option>
+      </select>
+      <input type="date" required />
+      <input type="time" required />
+      <div class="form-group">
+        
+      <textarea name="" id="description" placeholder="Write something about your issue..." required></textarea>
+      </div>
+      
+      <button type="submit" class="btn">Book Now</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 <span>ServiGo</span>. All rights reserved</p>
+    <div class="social-icons">
+      <a href="https://github.com/Muskan-tuteja"><i class="fa-brands fa-github"></i></a> 
+      <a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"><i class="fa-brands fa-linkedin"></i></a> 
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+    </div>
+  </footer>
+
+</body>
+</html>
