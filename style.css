@@ -350,7 +350,7 @@ footer .social-icons a:hover {
   }
   
   .hero-content h1 {
-    font-size: 29px;
+    font-size: 28px;
     text-align: center;
   }
   .hero-content h1 span {
@@ -440,7 +440,7 @@ footer .social-icons a:hover {
     margin-right: 90px;
   }
   .hero-content h1 {
-    font-size: clamp(28px, 5vw, 46px); 
+    font-size: 25px ;
     text-align: center;
   }
   .hero-content h1 span {
