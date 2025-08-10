@@ -1,5 +1,4 @@
 .dashboard-container {
-
   padding: 20px;
 }
 
@@ -23,7 +22,8 @@ table {
   margin-bottom: 20px;
 }
 
-table th, table td {
+table th,
+table td {
   border: 1px solid #ddd;
   padding: 8px;
 }
@@ -39,32 +39,29 @@ table th, table td {
 .actions button:hover {
   background: rgba(21, 21, 207, 0.7);
 }
-@media (max-width: 768px){
-  .dashboard-container{
+@media (max-width: 768px) {
+  .dashboard-container {
     width: 100%;
     padding: 10px;
   }
   .stat-card {
-   
-     padding: 9px;
- 
+    padding: 9px;
   }
-
 }
-@media (max-width: 468px){
+@media (max-width: 468px) {
   .stat-card {
     padding: 2px;
   }
 
   .actions {
     display: flex;
-    flex-direction: column; /* ऊपर-नीचे */
-    gap: 10px; /* बटन के बीच space */
-    align-items: center; /* center align */
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
   }
 
   .actions button {
-    width: 100%; /* पूरे container की चौड़ाई */
-    max-width: 200px; /* optional */
+    width: 100%;
+    max-width: 200px;
   }
 }

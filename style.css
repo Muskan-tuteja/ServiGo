@@ -84,7 +84,7 @@ body {
 .hero-content {
   flex: 1;
   text-align: left;
-  /* background-color: rgba(255, 255, 255, 0.6); */
+
   padding: 30px;
   border-radius: 12px;
 }
@@ -236,84 +236,7 @@ footer .social-icons a:hover {
   color: rgba(0, 0, 255, 0.238);
 }
 
-/* @media (max-width: 768px) {
-  .menu {
-    display: none; 
-    flex-direction: column;
-    background-color: rgba(204, 204, 238, 0.964);
-
-   
-    position: fixed;
-    top: 97px;
-    bottom:0.5px;
-    right: 0;
-    width: 200px;
-    padding: 15px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    z-index: 1000;
-  }
-
- 
-  #menu-toggle:checked + .menu-icon + .menu {
-    display: flex;
-  }
-
-
-  .menu-icon {
-    display: block;
-    color: #333;
-  }
-  .navbar ul {
-    display: none;
-  }
-  .navbar ul li {
-    text-align: center;
-  }
-  .hero-img img{
-    display: none;
-  }
-  .hero-content h1{
-    font-size: 80px;
-    text-align: center;
-    
- 
-  }
-  .hero-content h1 span{
-    color:rgba(96, 96, 208, 0.7);
-    
-  }
-  .hero-content p{
-    font-size: 18px;
-    color: black;
-    font-weight: 600;
-  }
-  .btn{
-    margin-left: 75px;
-  }
-  body{
-    display: block;
-  }
-  footer{
-    font-size: 26px;
-  }
-   .service-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .card {
-    width: 80%;
-    max-width: 300px;
-  }
-.card .btn{
-  margin-right: 62px;
-}
-   */
-/* } */
-
-/* ---------- Mobile (max-width: 480px) ---------- */
 @media (max-width: 480px) {
-  /* Navbar */
   .menu {
     display: none;
     flex-direction: column;
@@ -339,8 +262,6 @@ footer .social-icons a:hover {
     display: none;
   }
 
-  /* Hero */
-  /* Hero */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -353,15 +274,14 @@ footer .social-icons a:hover {
     order: 2;
   }
   .hero-img img {
-    display: block; /* Tablet me show */
+    display: block;
     max-width: 130%;
     height: auto;
     border-radius: 12px;
     margin-right: 90px;
   }
-  
+
   .hero-content h1 {
-  
     height: auto;
     font-size: 2.5rem;
     text-align: center;
@@ -373,7 +293,7 @@ footer .social-icons a:hover {
     font-size: 1.1rem;
     font-weight: 400;
     color: black;
-  margin-left: 20px;
+    margin-left: 20px;
   }
   .btn {
     display: inline-block;
@@ -381,7 +301,6 @@ footer .social-icons a:hover {
     margin-left: 3rem;
   }
 
-  /* Services */
   .service-cards {
     flex-direction: column;
     align-items: center;
@@ -390,12 +309,10 @@ footer .social-icons a:hover {
     width: 90%;
     max-width: 300px;
   }
-   .card .btn {
-   
+  .card .btn {
     margin-left: 8px;
   }
 
-  /* Footer */
   footer {
     margin-top: 20%;
     font-size: 20px;
@@ -406,9 +323,7 @@ footer .social-icons a:hover {
   }
 }
 
-/* ---------- Tablet (481px - 768px) ---------- */
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Navbar */
   .menu {
     display: none;
     flex-direction: column;
@@ -434,7 +349,6 @@ footer .social-icons a:hover {
     display: none;
   }
 
-  /* Hero */
   .hero {
     flex-direction: column;
     text-align: center;
@@ -447,14 +361,14 @@ footer .social-icons a:hover {
     order: 2;
   }
   .hero-img img {
-    display: block; /* Tablet me show */
+    display: block;
     max-width: 100%;
     height: auto;
     border-radius: 12px;
     margin-right: 90px;
   }
   .hero-content h1 {
-    font-size: 25px ;
+    font-size: 25px;
     text-align: center;
   }
   .hero-content h1 span {
@@ -463,7 +377,7 @@ footer .social-icons a:hover {
   .hero-content p {
     text-align: center;
     margin-right: 55px;
-  font-size: clamp(14px, 2.5vw, 18px);
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: 500;
   }
   .btn {
@@ -472,7 +386,6 @@ footer .social-icons a:hover {
     margin-left: 6rem;
   }
 
-  /* Services */
   .service-cards {
     flex-wrap: wrap;
     justify-content: center;
@@ -482,11 +395,9 @@ footer .social-icons a:hover {
     max-width: 260px;
   }
   .card .btn {
-   
     margin-left: 8px;
   }
 
-  /* Footer */
   footer {
     font-size: 22px;
     padding: 12px;

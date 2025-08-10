@@ -1,7 +1,6 @@
-/* ====== Booking Section ====== */
 .booking {
   padding: 60px 8%;
-  background: linear-gradient(180deg, rgba(96,96,208,0.05), #ffffff);
+  background: linear-gradient(180deg, rgba(96, 96, 208, 0.05), #ffffff);
   text-align: center;
 }
 
@@ -12,17 +11,15 @@
   margin-bottom: 30px;
 }
 
-/* Form Container */
 .booking form {
   max-width: 600px;
   margin: auto;
   background: #fff;
   padding: 30px 25px;
   border-radius: 16px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-/* Input, Select, Textarea */
 .booking input,
 .booking select,
 .booking textarea {
@@ -45,13 +42,11 @@
   box-shadow: 0 0 6px rgba(96, 96, 208, 0.4);
 }
 
-/* Textarea Height */
 .booking textarea {
   min-height: 120px;
   resize: vertical;
 }
 
-/* Button */
 .booking .btn {
   display: inline-block;
   width: 100%;
@@ -71,12 +66,11 @@
   transform: scale(1.02);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .booking {
     padding: 40px 5%;
   }
-  .booking .btn{
+  .booking .btn {
     margin-left: 4px;
   }
 }
