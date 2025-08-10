@@ -1,0 +1,82 @@
+/* ====== Booking Section ====== */
+.booking {
+  padding: 60px 8%;
+  background: linear-gradient(180deg, rgba(96,96,208,0.05), #ffffff);
+  text-align: center;
+}
+
+.booking h2 {
+  font-size: 34px;
+  font-weight: 700;
+  color: rgb(81, 81, 228);
+  margin-bottom: 30px;
+}
+
+/* Form Container */
+.booking form {
+  max-width: 600px;
+  margin: auto;
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+/* Input, Select, Textarea */
+.booking input,
+.booking select,
+.booking textarea {
+  width: 100%;
+  padding: 12px 15px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+.booking input:focus,
+.booking select:focus,
+.booking textarea:focus {
+  border-color: rgba(96, 96, 208, 0.8);
+  background-color: #fff;
+  outline: none;
+  box-shadow: 0 0 6px rgba(96, 96, 208, 0.4);
+}
+
+/* Textarea Height */
+.booking textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Button */
+.booking .btn {
+  display: inline-block;
+  width: 100%;
+  padding: 12px;
+  background-color: rgba(96, 96, 208, 0.8);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.booking .btn:hover {
+  background-color: rgba(21, 21, 207, 0.9);
+  transform: scale(1.02);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .booking {
+    padding: 40px 5%;
+  }
+  .booking .btn{
+    margin-left: 4px;
+  }
+}

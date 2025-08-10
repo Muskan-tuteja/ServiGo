@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Register | ServiGo</title>
   <link rel="stylesheet" href="/style.css" />
-  <link rel="stylesheet" href="../login/login.css" />
+  <link rel="stylesheet" href="../login/login.css
+  " />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
 </head>
 <body>
@@ -13,14 +14,17 @@
   <!-- Header -->
   <header class="container">
     <img src="/images/servigo.png" alt="ServiGo Logo" />
-    <nav class="navbar">
-      <ul>
+     <nav class="navbar">
+          <input type="checkbox" id="menu-toggle">
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+     
+      <ul class="menu">
         <li><a href="/index.html">Home</a></li>
         <li><a href="../services/services.html">Services</a></li>
         <li><a href="../booking/booking.html">Booking</a></li>
         <li><a href="../login/login.html">Login</a></li>
         <li><a href="../register/register.html">Register</a></li>
-        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
       </ul>
     </nav>
   </header>
@@ -56,7 +60,7 @@
           <input type="password" id="confirm-password" name="confirm-password" required />
         </div>
 
-        <button type="submit" class="btn">Register</button>
+        <button type="submit" class="btnn">Register</button>
       </form>
 
       <p class="signup-link">Already have an account? <a href="../login/login.html">Login here</a></p>
