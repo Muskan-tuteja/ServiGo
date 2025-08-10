@@ -14,7 +14,7 @@
 - Connect login/register to backend API
 - Load services data dynamically
 
- cd Servigo
+ cd [Servigo](https://muskan-tuteja.github.io/ServiGo/)
 
  Servigo/
 │
