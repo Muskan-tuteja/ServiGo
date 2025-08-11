@@ -97,4 +97,7 @@
     width: 300px;
     margin-left: 25px;
   }
+    .cards .btn {
+    margin-left: 0.5rem;
+  }
 }

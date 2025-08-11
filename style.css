@@ -327,6 +327,9 @@ footer .social-icons a:hover {
   .card .btn {
     margin-left: 8px;
   }
+  .btns{
+    margin-left: 3rem;
+  }
 
   footer {
     margin-top: 20%;
@@ -390,10 +393,10 @@ footer .social-icons a:hover {
     color: rgba(96, 96, 208, 0.7);
   }
   .hero-content p {
-    
+    width: 2;
     text-align: center;
     margin-right: 55px;
-   
+    font-size: clamp(14px, 2.5vw, 18px);
     font-weight: 500;
   }
   .btn {
