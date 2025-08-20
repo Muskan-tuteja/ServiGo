@@ -1,77 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Booking | ServiGo</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="../../style.css" />
-    <link rel="stylesheet" href="booking.css" />
-  </head>
-  <body>
-    <header class="container">
-      <img src="../../images/servigo.png" alt="ServiGo Logo" />
-      <nav class="navbar">
-        <input type="checkbox" id="menu-toggle" />
-        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Booking | ServiGo</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"/>
+<link href="../../style.css" rel="stylesheet"/>
+<link href="booking.css" rel="stylesheet"/>
+</head>
+<body>
+<header class="container">
+<img alt="ServiGo Logo" src="../../images/servigo.png"/>
+<nav class="navbar">
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-icon" for="menu-toggle">☰</label>
+<ul class="menu">
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../services/services.html">Services</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="../login/login.html">Login</a></li>
+<li><a href="../register/register.html">Register</a></li>
+<li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+</ul>
+</nav>
+</header>
+<section class="booking">
+<h2>Book a Service</h2>
+<form>
+<input id="name" placeholder="Your Name" required="True" type="text"/>
+<input id="phone" placeholder="Enter Your phone" required="True" type="tel"/>
+<select id="service" required="True">
+<option value="">Select Service</option>
+<option value="AC-Repair">AC Repair</option>
+<option value="Cleaning">Cleaning</option>
+<option value="Plumbing">Plumbing</option>
+<option value="Home-Cleaning">Home Cleaning</option>
+<option value="Electrician">Electrician</option>
+<option value="Carpentry">Carpentry</option>
+<option value="Wall-Painting">Wall Painting</option>
+<option value="Laundry-Services">Laundry Services</option>
+<option value="Appliance-Repai">Appliance Repai</option>
+</select>
+<input id="date" placeholder="Date" required="True" type="date"/>
+<input id="time" placeholder="Time" required="True" type="time"/>
+<div class="form-group">
+<textarea id="description" name="" placeholder="Write something about your issue..." required=""></textarea>
+</div>
+<button class="btn" type="submit">Book Now</button>
+</form>
+</section>
+<footer>
+<p>© 2025 <span>ServiGo</span>. All rights reserved</p>
+<div class="social-icons">
+<a href="https://github.com/Muskan-tuteja"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  const pre = params.get('service');
+  const select = document.getElementById('service');
+  if (pre && select) {
+    const found = Array.from(select.options).some(o => o.value.toLowerCase() === pre.toLowerCase());
+    if (found) select.value = pre;
+  }
 
-        <ul class="menu">
-          <li><a href="../../index.html">Home</a></li>
-          <li><a href="../services/services.html">Services</a></li>
-          <li><a href="booking.html">Booking</a></li>
-          <li><a href="../login/login.html">Login</a></li>
-          <li><a href="../register/register.html">Register</a></li>
-          <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <section class="booking">
-      <h2>Book a Service</h2>
-      <form>
-        <input type="text" placeholder="Your Name" required />
-        <input type="tel" placeholder="Enter Your phone" required />
-        <select required>
-          <option value="">Select Service</option>
-          <option value="ac">AC Repair</option>
-          <option value="cleaning">Cleaning</option>
-          <option value="plumbing">Plumbing</option>
-          <option value="Home Cleaning">Home Cleaning</option>
-          <option value="Electrician">Electrician</option>
-          <option value="Carpentry">Carpentry</option>
-          <option value="Wall Painting">Wall Painting</option>
-          <option value="Laundry Services">Laundry Services</option>
-          <option value="Appliance Repai">Appliance Repai</option>
-        </select>
-        <input type="date" placeholder="Date" />
-        <input type="time" placeholder="Time" />
-        <div class="form-group">
-          <textarea
-            name=""
-            id="description"
-            placeholder="Write something about your issue..."
-            required
-          ></textarea>
-        </div>
-
-        <button type="submit" class="btn">Book Now</button>
-      </form>
-    </section>
-
-    <footer>
-      <p>&copy; 2025 <span>ServiGo</span>. All rights reserved</p>
-      <div class="social-icons">
-        <a href="https://github.com/Muskan-tuteja"
-          ><i class="fa-brands fa-github"></i
-        ></a>
-        <a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"
-          ><i class="fa-brands fa-linkedin"></i
-        ></a>
-        <a href="#"><i class="fa-brands fa-instagram"></i></a>
-      </div>
-    </footer>
-  </body>
+  const form = document.querySelector('form');
+  if (form) {
+    form.addEventListener('submit', function (e) {
+      const required = form.querySelectorAll('input[required], select[required], textarea[required]');
+      for (const el of required) {
+        if (!el.value.trim()) {
+          e.preventDefault();
+          alert('Please fill all required fields.');
+          el.focus();
+          return false;
+        }
+      }
+      alert('Booking submitted! (Demo only)');
+    });
+  }
+});
+</script>
+</body>
 </html>

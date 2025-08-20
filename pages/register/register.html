@@ -1,81 +1,93 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Register | ServiGo</title>
-  <link rel="stylesheet" href="../../style.css" />
-  <link rel="stylesheet" href="../login/login.css
-  " />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Register | ServiGo</title>
+<link href="../../style.css" rel="stylesheet"/>
+<link href="../login/login.css
+  " rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" rel="stylesheet"/>
 </head>
 <body>
-
-
-  <header class="container">
-    <img src="../../images/servigo.png" alt="ServiGo Logo" />
-     <nav class="navbar">
-          <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-     
-      <ul class="menu">
-        <li><a href="../../index.html">Home</a></li>
-        <li><a href="../services/services.html">Services</a></li>
-        <li><a href="../booking/booking.html">Booking</a></li>
-        <li><a href="../login/login.html">Login</a></li>
-        <li><a href="../register/register.html">Register</a></li>
-        <li><a href="../dashboard/dashboard.html">Dashboard</a></li>
-      </ul>
-    </nav>
-  </header>
-
-
-  <section class="login-section">
-    <div class="login-container">
-      <h2>Create Your Account</h2>
-      <form action="#" method="POST">
-        
-        <div class="form-group">
-          <label for="fullname">Full Name</label>
-          <input type="text" id="fullname" name="fullname" required />
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
-        </div>
-
-        <div class="form-group">
-          <label for="phone">Phone Number</label>
-          <input type="tel" id="phone" name="phone" required />
-        </div>
-
-        <div class="form-group">
-          <label for="password">Create Password</label>
-          <input type="password" id="password" name="password" required />
-        </div>
-
-        <div class="form-group">
-          <label for="confirm-password">Confirm Password</label>
-          <input type="password" id="confirm-password" name="confirm-password" required />
-        </div>
-
-        <button type="submit" class="btnn">Register</button>
-      </form>
-
-      <p class="signup-link">Already have an account? <a href="../login/login.html">Login here</a></p>
-    </div>
-  </section>
-
- 
-  <footer>
-    <p>&copy; 2025 <span>ServiGo</span>. All rights reserved</p>
-    <div class="social-icons">
-      <a href="https://github.com/Muskan-tuteja"><i class="fa-brands fa-github"></i></a> 
-      <a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"><i class="fa-brands fa-linkedin"></i></a> 
-      <a href="#"><i class="fa-brands fa-instagram"></i></a>
-    </div>
-  </footer>
-
-</body>
+<header class="container">
+<img alt="ServiGo Logo" src="../../images/servigo.png"/>
+<nav class="navbar">
+<input id="menu-toggle" type="checkbox"/>
+<label class="menu-icon" for="menu-toggle">☰</label>
+<ul class="menu">
+<li><a href="../../index.html">Home</a></li>
+<li><a href="../services/services.html">Services</a></li>
+<li><a href="../booking/booking.html">Booking</a></li>
+<li><a href="../login/login.html">Login</a></li>
+<li><a href="../register/register.html">Register</a></li>
+<li><a href="../dashboard/dashboard.html">Dashboard</a></li>
+</ul>
+</nav>
+</header>
+<section class="login-section">
+<div class="login-container">
+<h2>Create Your Account</h2>
+<form action="#" method="POST">
+<div class="form-group">
+<label for="fullname">Full Name</label>
+<input id="fullname" name="fullname" required="" type="text">
+</input></div>
+<div class="form-group">
+<label for="email">Email Address</label>
+<input id="email" name="email" required="" type="email"/>
+</div>
+<div class="form-group">
+<label for="phone">Phone Number</label>
+<input id="phone" name="phone" required="" type="tel"/>
+</div>
+<div class="form-group">
+<label for="password">Create Password</label>
+<div class="password-wrap"><input id="password" name="password" required="" type="password"/><button class="toggle-pwd" data-toggle="password" type="button">Show</button></div>
+</div>
+<div class="form-group">
+<label for="confirm-password">Confirm Password</label>
+<div class="password-wrap"><input id="confirm-password" name="confirm-password" required="" type="password"/><button class="toggle-pwd" data-toggle="confirm-password" type="button">Show</button></div>
+</div>
+<button class="btnn" type="submit">Register</button>
+</form>
+<p class="signup-link">Already have an account? <a href="../login/login.html">Login here</a></p>
+</div>
+</section>
+<footer>
+<p>© 2025 <span>ServiGo</span>. All rights reserved</p>
+<div class="social-icons">
+<a href="https://github.com/Muskan-tuteja"><i class="fa-brands fa-github"></i></a>
+<a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"><i class="fa-brands fa-linkedin"></i></a>
+<a href="#"><i class="fa-brands fa-instagram"></i></a>
+</div>
+</footer>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const form = document.querySelector('form');
+  const email = document.getElementById('email');
+  const pwd = document.getElementById('password');
+  const cpwd = document.getElementById('confirm-password');
+  document.querySelectorAll('button.toggle-pwd').forEach(btn => {
+    const target = document.getElementById(btn.dataset.toggle);
+    btn.addEventListener('click', function(){
+      if (target.type === 'password') { target.type = 'text'; btn.textContent = 'Hide'; }
+      else { target.type = 'password'; btn.textContent = 'Show'; }
+    });
+  });
+  form.addEventListener('submit', function(e){
+    if (!email.value.includes('@') || !email.value.includes('.')){
+      e.preventDefault(); alert('Please enter a valid email.'); email.focus(); return false;
+    }
+    if (pwd.value.length < 6){
+      e.preventDefault(); alert('Password must be at least 6 characters.'); pwd.focus(); return false;
+    }
+    if (pwd.value !== cpwd.value){
+      e.preventDefault(); alert('Passwords do not match.'); cpwd.focus(); return false;
+    }
+    alert('Registered! (Demo)');
+  });
+});
+</script></body>
 </html>
