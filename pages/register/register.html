@@ -29,10 +29,10 @@
 <section class="login-section">
 <div class="login-container">
 <h2>Create Your Account</h2>
-<form action="#" method="POST">
+<form id="registerForm">
 <div class="form-group">
 <label for="fullname">Full Name</label>
-<input id="fullname" name="fullname" required="" type="text">
+<input id="fullname" name="fullname" required type="text">
 </input></div>
 <div class="form-group">
 <label for="email">Email Address</label>
@@ -56,7 +56,7 @@
 </div>
 </section>
 <footer>
-<p>© 2025 <span>ServiGo</span>. All rights reserved</p>
+  <p>&copy; 2025 <span>ServiGo</span>.All rights reserved</p>
 <div class="social-icons">
 <a href="https://github.com/Muskan-tuteja"><i class="fa-brands fa-github"></i></a>
 <a href="https://www.linkedin.com/in/muskan-tuteja-90b1b2322"><i class="fa-brands fa-linkedin"></i></a>
@@ -65,29 +65,53 @@
 </footer>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  const form = document.querySelector('form');
+  const form = document.getElementById('registerForm');
   const email = document.getElementById('email');
   const pwd = document.getElementById('password');
   const cpwd = document.getElementById('confirm-password');
+
+  // Password show/hide
   document.querySelectorAll('button.toggle-pwd').forEach(btn => {
     const target = document.getElementById(btn.dataset.toggle);
     btn.addEventListener('click', function(){
-      if (target.type === 'password') { target.type = 'text'; btn.textContent = 'Hide'; }
-      else { target.type = 'password'; btn.textContent = 'Show'; }
+      if (target.type === 'password') {
+        target.type = 'text';
+        btn.textContent = 'Hide';
+      } else {
+        target.type = 'password';
+        btn.textContent = 'Show';
+      }
     });
   });
+
+  // Form Validation
   form.addEventListener('submit', function(e){
+    e.preventDefault(); // prevent actual submission
+     
+
     if (!email.value.includes('@') || !email.value.includes('.')){
-      e.preventDefault(); alert('Please enter a valid email.'); email.focus(); return false;
+      alert('Please enter a valid email.');
+      email.focus();
+      return;
     }
+
     if (pwd.value.length < 6){
-      e.preventDefault(); alert('Password must be at least 6 characters.'); pwd.focus(); return false;
+      alert('Password must be at least 6 characters.');
+      pwd.focus();
+      return;
     }
+
     if (pwd.value !== cpwd.value){
-      e.preventDefault(); alert('Passwords do not match.'); cpwd.focus(); return false;
+      alert('Passwords do not match.');
+      cpwd.focus();
+      return;
     }
-    alert('Registered! (Demo)');
+
+    // Demo success message
+    alert('Registered Successfully!');
+   
   });
 });
-</script></body>
+</script>
+</body>
 </html>
